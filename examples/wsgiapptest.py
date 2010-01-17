@@ -52,4 +52,4 @@ if __name__ == "__main__":
     options, args = parser.parse_args()
     if options.verbose:
         logging.getLogger("feather").setLevel(logging.DEBUG)
-    feather.serve_wsgi_app((options.host, options.port), wsgiapp)
+    feather.wsgi.serve((options.host, options.port), wsgiapp)
