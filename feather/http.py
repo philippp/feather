@@ -325,7 +325,7 @@ class HTTPConnection(connections.TCPConnection):
             else:
                 for name, val in headers.items():
                     if name.lower() == 'connection' and val.lower() == 'close':
-                        sef.closing = True
+                        self.closing = True
                         break
 
             if 'content-length' in headers:
